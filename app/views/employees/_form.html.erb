@@ -1,0 +1,64 @@
+<%= form_for @employee do |f| %>
+  <% if @employee.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@employee.errors.count, "error") %><br> This employee couldn’t be saved because:
+      </h2>
+      <ul>
+        <% @employee.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ <p>
+    <%= f.label :full_name %><br>
+    <%= f.text_field :full_name %>
+  </p>
+
+  <p>
+    <%= f.label :address %><br>
+    <%= f.text_area :address %>
+  </p>
+
+  <p>
+    <%= f.label :phone %><br>
+    <%= f.telephone_field :phone %>
+  </p>
+
+  <p>
+    <%= f.label :email %><br>
+    <%= f.email_field :email %>
+  </p>
+
+  <p>
+    <%= f.label :role %><br>
+    <%= f.text_field :role %>
+  </p>
+
+  <p>
+    <%= f.label :area %><br>
+    <%= f.text_field :area %>
+  </p>
+
+  <p>
+    <%= f.label :admission_date %><br>
+    <%= f.date_select :admission_date, :order => [:day, :month, :year] %>
+  </p>
+
+  <p>
+    <%= f.label :contract_duration %><br>
+    <%= f.text_field :contract_duration %>
+  </p>
+
+  <p>
+    <%= f.label :contract_term %><br>
+    <%= f.text_field :contract_term %>
+
+</p>
+
+<p>
+  <%= f.submit %>
+</p>
+<% end %>

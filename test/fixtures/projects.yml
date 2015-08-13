@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_name: MyString
+  area: MyString
+  manager: MyString
+  project_kickoff: 2015-08-11
+  project_deadline: 2015-08-11
+  team: MyText
+
+two:
+  project_name: MyString
+  area: MyString
+  manager: MyString
+  project_kickoff: 2015-08-11
+  project_deadline: 2015-08-11
+  team: MyText

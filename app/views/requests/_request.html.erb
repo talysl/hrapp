@@ -1,0 +1,16 @@
+<table>
+  <tr>
+   <th>Request Number</th>
+   <th>Start Date</th>
+   <th>End Date</th>
+   <th>Considerations</th>
+  </tr>
+  <% @requests.each do |request| %>
+<tr>
+ <td><%= request.id %></td>
+ <td><%= request.start_date %></td>
+<td><%= request.end_date %></td>
+<td><%= request.considerations %></td>
+</tr>
+<%end%>
+</table>

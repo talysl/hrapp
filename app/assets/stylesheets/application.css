@@ -1,0 +1,83 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body {
+background: url("/assets/Azul.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1, h6 {
+    margin: 0;
+    font-weight: normal;
+}
+div#container {
+    position: relative;
+    min-height: 850px;
+    border:2px black solid;
+    background: rgb(2, 106, 185);
+    max-width: 100%;
+    min-width: 1000px;
+    margin: auto;
+}
+div#content {
+	left: 0;
+	padding: 3px;
+    margin: 3px 3px 3px 5px;
+    background: rgb(25, 148, 243);
+    border: 1px solid white;
+    min-height: 850px;
+    width: 98.5%;
+}
+
+ #navbar ul          
+ {
+     margin: 0;         
+     padding: 5px;         
+     list-style-type: none;         
+     text-align: left;  
+     font-size: 17px;      
+     background-color: #333;         
+ }  
+ 
+ #navbar ul li           
+ {
+     display: inline;
+       
+ }  
+ 
+ #navbar ul li a          
+ {
+     text-decoration: none;         
+     padding: .2em 1em;         
+     color: #fff;         
+     background-color: #333;         
+     }  
+     
+#navbar ul li a:hover          
+{
+    color: navy;
+    background-color: azure;         
+   	border:0px orange solid;
+ 	border-radius:9px;
+ 	-moz-border-radius:9px; 
+       
+}
+div#footer {
+    border-top: none;
+    text-align: center;
+}

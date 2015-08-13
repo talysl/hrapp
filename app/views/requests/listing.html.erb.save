@@ -1,0 +1,28 @@
+<h1>Requests </h1>
+<br>
+<p>Search Request:</p>
+<%= form_tag(requests_path, :method => "get", id: "search-form") do %>
+<%= text_field_tag :search, params[:search], placeholder: "Search Requests" %>
+<%= submit_tag "Search" %>
+<%end%>
+
+<% if @holidays.present? %>
+  <%= render @holidays %> <br> <p>All Requests:</p> <table> <% else %> <tr>
+  <p>Employee named <%= params[:search] %> not found.</p> <th>Request Number</th>
+  <p><%= link_to 'back', holidays_path %></p> <th>Start Date</th>
+<% end %>
+
+   <th>End Date</th>
+   <th>Considerations</th>
+  </tr>
+  <% @requests.each do |request| %>
+<tr>
+ <td><%= request.id %></td>
+ <td><%= request.start_date %></td>
+<td><%= request.end_date %></td>
+<td><%= request.considerations %>
+</tr>
+<%end%>
+</table>
+<%= link_to 'Back', admin_path %>
+

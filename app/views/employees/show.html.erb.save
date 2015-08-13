@@ -1,0 +1,51 @@
+<h1> Employee Profile:</h1>
+<p>
+  <strong>Company ID:</strong>
+  <%=@employee.id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%=@employee.full_name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @employee.address %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @employee.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @employee.email %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @employee.role %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @employee.area %>
+</p>
+
+<p>
+  <strong>Admission Date:</strong>
+  <%= @employee.admission_date %>
+</p>
+
+<p>
+  <strong>Contract Duration:</strong>
+  <%= @employee.contract_duration %>
+  <br>
+  <strong>Contract Term:</strong>
+  <%= @employee.contract_term %>
+</p>
+<%= link_to 'Edit', edit_employee_path(@employee) %> 
+<%= link_to 'My Annual Leave Requests', controller: "employee_requests" %>
+<%= link_to 'Back', employees_path %>

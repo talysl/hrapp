@@ -1,0 +1,22 @@
+<h1>Events</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Event name</th>
+      <th>Event date</th>
+      <th>Event details</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= event.event_name %></td>
+        <td><%= event.event_date %></td>
+        <td><%= event.event_details %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to 'Back', root_path %>

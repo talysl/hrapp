@@ -1,0 +1,21 @@
+<h1> My Requests </h1>
+<table>
+  <tr>
+   <th>Request Number</th>
+   <th>Start Date</th>
+   <th>End Date</th>
+   <th colspan="2"></th>
+
+  </tr>
+  <% @employee.requests.each do |request| %>
+  <tr>
+   <td><%= request.id %></td>
+   <td><%= request.start_date %></td>
+   <td><%= request.end_date %></td>
+   <td><%= link_to 'Show', employee_request_path(@employee, request) %>
+  </tr>
+<%end%>
+</table>
+<%= link_to 'New Request', new_employee_request_path(@employee) %>
+<%= link_to 'Back', root_path %>
+

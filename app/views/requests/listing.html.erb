@@ -1,0 +1,20 @@
+<h1>Requests </h1>
+<br>
+<table>
+  <tr>
+   <th>Request Number</th>
+   <th>Start Date</th>
+   <th>End Date</th>
+   <th>Considerations</th>
+  </tr>
+  <% @requests.each do |request| %>
+<tr>
+ <td><%= request.id %></td>
+ <td><%= request.start_date %></td>
+<td><%= request.end_date %></td>
+<td><%= request.considerations %>
+</tr>
+<%end%>
+</table>
+<%= link_to 'Back', admin_path %>
+

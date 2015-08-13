@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Human Resources App</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<nav role="navigation">
+    <div id="navbar">
+        <ul class="nav" id="nav">
+            <li><%= link_to "Home", root_path %></li>
+            <%= render 'devise/menu/registration_items' %>
+            <%= render 'devise/menu/login_items' %>
+            <li><%= link_to "Admin Area", admin_path %></li>
+        </ul>
+    </div>
+</nav>
+<div id='container'>
+    <div id='content'>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+        <%= yield %>
+     </div>
+</div>
+<div id='footer'>
+     <h6 class="footertext">&copy; Human Resources App &trade; 2015</h6>
+</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<h1> Annual Leave Request: </h1>
+<strong>From:</strong> <%=@request.start_date %> <strong> To: </strong> <%=@request.end_date%>
+<strong> Considerations: </strong>
+<%=@request.considerations%>
+<p>
+<%= link_to 'Destroy Request', employee_request_path, :method=>:delete, data: { confirm: 'Are you sure?' } %>
+</p>
+<p>
+<%= link_to 'Back', employee_requests_path,:method=>:get%>
+</p>

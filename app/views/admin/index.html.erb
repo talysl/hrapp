@@ -1,0 +1,12 @@
+<h3>Administrative Area</h3>
+<h4>Statistics:</h4>
+<h5><%= @employees %> employees. </h5>
+<h5><%= @requests %> holidays requests. </h5>
+<h5><%= @events %> events. </h5>
+<h5><%= @projects %> projects. </h5>
+
+<%= link_to 'Employees', controller:'employees' %><br>
+<%= link_to 'Holidays Requests', requests_path %><br>
+<%= link_to 'Events', events_path %><br>
+<%= link_to 'Projects', projects_path %><br>
+

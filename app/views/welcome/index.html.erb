@@ -1,0 +1,40 @@
+<h1>Welcome <%= @employee.full_name %>!</h1>
+  <p>
+    <strong>Company ID:</strong>
+    <%=@employee.id %>
+    <br>
+    <strong>Name:</strong>
+    <%=@employee.full_name %>
+  </p>
+   <p>
+    <strong>Address:</strong>
+    <%= @employee.address %>
+    <br>
+    <strong>Phone:</strong>
+    <%= @employee.phone %>
+    <br>
+    <strong>Email:</strong>
+    <%= @employee.email %>
+  </p>
+  <p>
+    <strong>Role:</strong>
+    <%= @employee.role %>
+    <br>
+    <strong>Area:</strong>
+    <%= @employee.area %>
+  </p>
+  <p>
+    <strong>Admission Date:</strong>
+    <%= @employee.admission_date %>
+    <br>
+    <strong>Contract Duration:</strong>
+    <%= @employee.contract_duration %>
+    <br>
+    <strong>Contract Term:</strong>
+    <%= @employee.contract_term %>
+  </p>
+<%= link_to 'My Annual Leave Requests', controller:'requests', employee_id: @employee.id %><br>
+<%=link_to 'View Events', events_view_path %><br>
+<%=link_to 'View Projects',projects_view_path %><br>
+  <p><h3> If there is any mistakes in your profile, please contact your manager or human resources.</h3></p>
+

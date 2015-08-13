@@ -1,0 +1,38 @@
+class RequestsController < ApplicationController
+# This controller manipulates the annual leave requests created by the employees
+
+  # First the controller find the employee and then find the requests related to this employee
+  def index
+    @employee = Employee.find(params[:employee_id])
+    @request = @employee.requests.all
+  end
+
+  def show
+    @employee = Employee.find(params[:employee_id])
+    @request = @employee.requests.find(params[:id])
+    @request = 
+  end
+
+  def new
+    @employee = Employee.find(params[:employee_id])
+    @request = @employee.requests.new
+  end
+
+  def create
+    @employee = Employee.find(params[:employee_id])
+    @request = @employee.requests.create(request_params)
+    redirect_to employee_request_path(@employee, request)
+  end
+ 
+  def destroy
+    @employee = Employee.find(params[:employee_id])
+    @request = @employee.requests.find(params[:id])
+    @request.destroy
+    redirect_to employee_requests_path(@employee)
+  end
+ 
+  private
+  def request_params
+    params.require(:request).permit(:start_date, :end_date, :considerations)
+  end
+end
